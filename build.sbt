@@ -36,7 +36,13 @@ lazy val scassandra = (project in file("scassandra")
     `cassandra-driver`,
     `executor-tools`,
     Pureconfig.pureconfig,
-    Pureconfig.cats)))
+    Pureconfig.cats,
+    shapeless,
+    `typesafe-config`))
+  enablePlugins(ShadingPlugin)
+  settings(shadedModules ++= Set("com.github.pureconfig" %% "pureconfig", "com.github.pureconfig" %% "pureconfig-cats"))
+  settings(shadingRules += ShadingRule.moveUnder("pureconfig", "com.evolutiongaming.scassandra.shaded"))
+  settings(validNamespaces ++= Set("com", "com.evolutiongaming", "com.evolutiongaming.scassandra", "com.evolutiongaming.scassandra.shaded")))
 
 lazy val tests = (project in file("tests")
   settings (name := "tests")

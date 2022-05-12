@@ -7,3 +7,7 @@ addSbtPlugin("com.github.sbt" % "sbt-release" % "1.1.0")
 addSbtPlugin("com.evolution" % "sbt-scalac-opts-plugin" % "0.0.9")
 
 addSbtPlugin("com.evolution" % "sbt-artifactory-plugin" % "0.0.2")
+
+addSbtPlugin("io.get-coursier" % "sbt-shading" % "2.0.1")
+
+addDependencyTreePlugin

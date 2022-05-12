@@ -10,6 +10,8 @@ object Dependencies {
   val `cassandra-launcher` = "com.evolutiongaming"    %% "cassandra-launcher"    % "0.0.4"
   val `cats-helper`        = "com.evolutiongaming"    %% "cats-helper"           % "2.7.2"
   val sstream              = "com.evolutiongaming"    %% "sstream"               % "0.2.1"
+  val shapeless            = "com.chuusai"            %% "shapeless"             % "2.3.9"
+  val `typesafe-config`    = "com.typesafe"            % "config"                % "1.4.2"
 
   object Logback {
     private val version = "1.2.7"
